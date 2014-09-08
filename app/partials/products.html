@@ -1,3 +1,8 @@
-<div ng-repeat="product in products">
-  <img ng-src="product.imgPath" />
+<div  ng-controller="ProductsController">
+  <div class="row">
+      <div ng-repeat="product in products" class="col-xs-6 col-md-3">
+            <a href="#" class="pull-left thumbnail">
+  <img ng-src="img/{{product.imgPath}}.jpg" />
+</a>
+</div>
 </div>
