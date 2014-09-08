@@ -11,11 +11,36 @@
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-<h1>Hadlows Jewellers</h1>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+  <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Products</a></li>
+              <li><a href="/#/about">About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+        </div>
+        <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+      <h1>Hadlows Jewellers</h1>
+              <p>Hadlows Jewellers is a beautifull light and airy boutique that Melanie opened in July 2009. She has worked in South Kensington for 10 years and knows what her clients needs and expectations are and will allways go that extra mile to make them happy.</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+        </p>
+      </div>
+
+    </div> <!-- /container -->
 
   <div ng-view></div>
 
