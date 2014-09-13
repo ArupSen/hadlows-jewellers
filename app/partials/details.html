@@ -1,14 +1,14 @@
 <div class="container">
-<a href="/" title="back to products" class="btn btn-primary">&lt;&lt; all products</a>
-<div class="details" ng-model="products">
+<a href="/" title="back to " class="btn btn-primary">&lt;&lt; all products</a>
+<div class="details">
   <div class="col-md-9">
-    <img class="img-responsive" ng-src="img/{{products[details].imgPath}}.jpg">
+    <img class="img-responsive" ng-src="img/{{details.imgPath}}.jpg">
   </div>
   <div class="col-md-3">
     <div>
-        <h2> <strong>{{products[details].title | lowercase }}</h2>
-        <p class="rightPrice magnifyPrice">{{products[details].price | currency :"£" }}</p>
-        <p> {{products[details].description}}</p>
+      <h2> <strong>{{details.title | uppercase }}</strong></h2>
+        <p class="rightPrice magnifyPrice">{{details.price | currency :"£" }}</p>
+        <p> {{details.description}}</p>
     </div>
   </div>
 </div>

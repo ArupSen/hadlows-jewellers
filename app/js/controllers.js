@@ -11,10 +11,7 @@ angular.module('myApp.controllers', []).
   .controller('AboutController', [function() {
 
   }])
-  .controller('DetailsController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
-    $http.get('js/products.json').success(function(data){
-      $scope.products = data;
-      $scope.details = $routeParams.productID;
-    });
-}]);
+  .controller('DetailsController',['$scope', '$routeParams', function($scope, $routeParams){
+    $scope.details = $scope.products[$routeParams.productID];
+  }]);
 
