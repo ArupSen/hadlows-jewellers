@@ -1,7 +1,7 @@
 <div  ng-controller="ProductsController">
   <div class="row">
     <div class="container">
-      <a ng-repeat="product in products" href="#" class="pull-left thumbnail col-xs-6 col-md-1">
+      <a ng-repeat="product in products" href="#/details/{{products.indexOf(product)}}" class="pull-left thumbnail col-xs-6 col-md-1">
         <img ng-src="img/{{product.imgPath}}.jpg" class="{{product.cssClass}}" />
       </a>
     </div>

@@ -3,108 +3,18 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-  controller('ProductsController', ['$scope', function($scope) {
-    // products holds data in here for now
-    $scope.products = [
-  {imgPath: 'MS-2014-1-01', 
-    cssClass: 'landscape',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-02', 
-    cssClass: 'landscape',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-03', 
-    cssClass: 'portrait',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-04', 
-    cssClass: 'portrait',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-05', 
-    cssClass: 'landscape',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-06', 
-    cssClass: 'landscape',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-07', 
-    cssClass: 'landscape',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-08', 
-    cssClass: 'portrait',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-09', 
-    cssClass: 'portrait',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-10', 
-    cssClass: 'portrait',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-11', 
-    cssClass: 'portrait',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-12', 
-    cssClass: 'portrait',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-13', 
-    cssClass: 'portrait',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-14', 
-    cssClass: 'portrait',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-15', 
-    cssClass: 'portrait',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'},
-  {imgPath: 'MS-2014-1-16', 
-    cssClass: 'landscape',
-    id: 'one',
-    title: 'name of piece',
-    description: 'some blurb here',
-    price: '200.00'}
-];
-
+  controller('ProductsController', ['$scope', '$http', function($scope,$http) {
+    $http.get('js/products.json').success(function(data){
+      $scope.products = data;
+    });
   }])
   .controller('AboutController', [function() {
 
-  }]);
+  }])
+  .controller('DetailsController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+    $http.get('js/products.json').success(function(data){
+      $scope.products = data;
+      $scope.details = $routeParams.productID;
+    });
+}]);
+

@@ -12,5 +12,6 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl: 'partials/products.html', controller: 'ProductsController'});
   $routeProvider.when('/about', {templateUrl: 'partials/about.html', controller: 'AboutController'});
+  $routeProvider.when('/details/:productID', {templateUrl: 'partials/details.html', controller: 'DetailsController'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);

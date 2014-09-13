@@ -1,0 +1,15 @@
+<div class="container">
+<a href="/" title="back to products" class="btn btn-primary">&lt;&lt; all products</a>
+<div class="details" ng-model="products">
+  <div class="col-md-9">
+    <img class="img-responsive" ng-src="img/{{products[details].imgPath}}.jpg">
+  </div>
+  <div class="col-md-3">
+    <div>
+        <h2> <strong>{{products[details].title | lowercase }}</h2>
+        <p class="rightPrice magnifyPrice">{{products[details].price | currency :"£" }}</p>
+        <p> {{products[details].description}}</p>
+    </div>
+  </div>
+</div>
+</div>
