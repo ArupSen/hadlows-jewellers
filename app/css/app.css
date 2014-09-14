@@ -3,3 +3,12 @@
 .landscape {
   padding: 35px 0;
 }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Great Vibes',cursive;
+}
+.navbar-default .navbar-brand {
+  margin-top: -9px;
+}
+h2.ng-binding {
+  text-transform: capitalize;
+}
