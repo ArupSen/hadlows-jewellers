@@ -1,16 +1,13 @@
-        <div class="container">
-
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-      <h1>Hadlows Jewellers</h1>
-              <p>Hadlows Jewellers is a beautifull light and airy boutique that Melanie opened in July 2009. She has worked in South Kensington for 10 years and knows what her clients needs and expectations are and will allways go that extra mile to make them happy.</p>
-      </div>
-
-    </div> <!-- /container -->
+<div class="container">
+  <div class="jumbotron">
+    <h1>Hadlows Jewellers Ltd</h1>
+    <p>Hadlows Jewellers is a beautifull light and airy boutique that Melanie opened in July 2009. She has worked in South Kensington for 10 years and knows what her clients needs and expectations are and will allways go that extra mile to make them happy.</p>
+  </div>
+</div> <!-- /container -->
 <div  ng-controller="ProductsController">
   <div class="row">
     <div class="container">
-      <a ng-repeat="product in products" href="#/details/{{$index}}" class="pull-left thumbnail col-xs-6 col-md-3">
+      <a ng-repeat="product in products" href="#/details/{{$index}}" class="pull-left thumbnail col-sm-4 col-xs-6 col-md-3">
         <img ng-src="img/{{product.imgPath}}.jpg" class="{{product.cssClass}}" />
       </a>
     </div>
