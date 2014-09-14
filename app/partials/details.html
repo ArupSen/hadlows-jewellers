@@ -1,13 +1,13 @@
 <div class="container">
-<a href="/" title="back to " class="btn btn-primary">&lt;&lt; all products</a>
+<a href="/" title="back to all products" class="btn btn-default"><i class="fa fa-angle-double-left"></i> all products</a>
 <div class="details">
   <div class="col-md-9">
     <img class="img-responsive" ng-src="img/{{details.imgPath}}.jpg">
   </div>
   <div class="col-md-3">
     <div>
-      <h2> <strong>{{details.title | uppercase }}</strong></h2>
-        <p class="rightPrice magnifyPrice">{{details.price | currency :"£" }}</p>
+      <h2>{{details.title}}</h2>
+        <p><i class="fa fa-gbp"></i> {{details.price | number :2}}</p>
         <p> {{details.description}}</p>
     </div>
   </div>
