@@ -7,8 +7,8 @@
 <div  ng-controller="ProductsController">
   <div class="row">
     <div class="container">
-      <a ng-repeat="product in products" href="#/details/{{$index}}" class="pull-left thumbnail col-sm-4 col-xs-6 col-md-3">
-        <img ng-src="img/{{product.imgPath}}.jpg" class="{{product.cssClass}}" />
+      <a ng-repeat="product in products" href="#/details/{{product[0]}}" class="pull-left thumbnail col-sm-4 col-xs-6 col-md-3">
+        <img ng-src="img/{{product[1].imgPath}}.jpg" class="{{product[1].cssClass}}" />
       </a>
     </div>
   </div>
