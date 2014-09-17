@@ -8,9 +8,9 @@ angular.module('myApp.controllers', []).
       $scope.products = data;
     });
   }])
-  .controller('AboutController', [function() {
-
-  }])
+//  .controller('AboutController', [function() {
+//
+//  }])
   .controller('DetailsController',['$scope', '$routeParams', function($scope, $routeParams){
     //$scope.details = $scope.products[$routeParams.productID];
     var id = $routeParams.productID;
