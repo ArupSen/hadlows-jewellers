@@ -1,5 +1,7 @@
 /* app css stylesheet */
-
+body {
+  overflow-x: hidden;
+}
 .landscape {
   padding: 35px 0;
 }
@@ -12,3 +14,4 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 h2.ng-binding {
   text-transform: capitalize;
 }
+
